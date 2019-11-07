@@ -51,9 +51,8 @@ namespace CarPark.Tests
         {
             //Arrange
             var rateService = _serviceProvider.GetService<IRateService>();
-            var entryDateTime = new DateTime(2019, 11, 7, 19, 11, 11); // Thrusday Morning 7 pm 
-            var exitDateTime = new DateTime(2019, 11, 8, 5, 0, 0, 0); // Thrusday Afternoon 4 pm
-
+            var entryDateTime = new DateTime(2019, 11, 7, 19, 11, 11);  
+            var exitDateTime = new DateTime(2019, 11, 8, 5, 0, 0, 0); 
             //Act
             var rate = rateService.CalculateRate(entryDateTime, exitDateTime);
 
@@ -68,9 +67,8 @@ namespace CarPark.Tests
         {
             //Arrange
             var rateService = _serviceProvider.GetService<IRateService>();
-            var entryDateTime = new DateTime(2019, 11, 9, 1, 0, 0); // Saturday Morning 1 am 
-            var exitDateTime = new DateTime(2019, 11, 10, 23, 0, 0, 0); // Sunday Night 11 pm
-
+            var entryDateTime = new DateTime(2019, 11, 9, 1, 0, 0);  
+            var exitDateTime = new DateTime(2019, 11, 10, 23, 0, 0, 0); 
             //Act
             var rate = rateService.CalculateRate(entryDateTime, exitDateTime);
 
@@ -84,8 +82,8 @@ namespace CarPark.Tests
         {
             //Arrange
             var rateService = _serviceProvider.GetService<IRateService>();
-            var entryDateTime = new DateTime(2019, 11, 7, 12, 0, 0); // Saturday Morning 1 am 
-            var exitDateTime = new DateTime(2019, 11, 7, 13, 0, 0, 0); // Monday Morning 5 am
+            var entryDateTime = new DateTime(2019, 11, 7, 12, 0, 0); 
+            var exitDateTime = new DateTime(2019, 11, 7, 13, 0, 0, 0); 
 
             //Act
             var rate = rateService.CalculateRate(entryDateTime, exitDateTime);
